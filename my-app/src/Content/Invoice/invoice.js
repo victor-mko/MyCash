@@ -22,7 +22,7 @@ class Invoice extends Component {
                     </thead>
                     <tbody>
                     {
-                            this.props.invoiceArray.map(( el, index) => {
+                        this.props.invoiceArray.map(( el, index) => {
                             return (
                                 <CostItem key={index} invoiceArray = {el}/>
                             );
@@ -37,7 +37,10 @@ class Invoice extends Component {
 
 export default connect (
     state => ({
-        invoiceArray: state.invoiceList
+        invoiceArray: state.invoiceList.filter(
+            invoice => state.invoiceList.map((el, index) => { 
+                return (el.what.includes(state.findInvoice))
+            }))
     }),
     dispatch => ({})
 )(Invoice);

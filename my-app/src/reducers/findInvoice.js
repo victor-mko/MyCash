@@ -1,16 +1,8 @@
-let date = new Date();
-let year = date.getUTCFullYear();
-let month = date.getUTCMonth() + 1;
-let day = date.getDate();
+let initialState = "";
 
-let invoiceArray = [];
-
-
-
-
-export default function findInvoice(state = invoiceArray, action) {
+export default function findInvoice(state = initialState, action) {
     if (action.type === "FIND_INVOICE") {
-        return
+        return action.payload;
     }
     return state;
 }
