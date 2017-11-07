@@ -37,7 +37,7 @@ class Invoice extends Component {
 
 export default connect (
     state => ({
-        invoiceArray: state
+        invoiceArray: state.invoiceList
     }),
     dispatch => ({})
 )(Invoice);

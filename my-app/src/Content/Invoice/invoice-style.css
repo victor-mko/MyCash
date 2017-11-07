@@ -3,7 +3,8 @@
   text-align: center; }
   .invoice-block table {
     width: 100%; }
-    .invoice-block table tr th, .invoice-block table tr td {
+    .invoice-block table tr th,
+    .invoice-block table tr td {
       width: 15%; }
     .invoice-block table tr th {
       color: #a6a6a6;

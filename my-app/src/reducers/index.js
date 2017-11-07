@@ -1,7 +1,9 @@
-import { compineReducers } from "redux";
+import { combineReducers } from "redux";
 
-import invoices from "./invoices";
+import invoiceList from "./invoices";
+import findInvoice from './findInvoice';
 
-export default compineReducers({
-    invoice
-})
+export default combineReducers({
+    invoiceList,
+    findInvoice
+});

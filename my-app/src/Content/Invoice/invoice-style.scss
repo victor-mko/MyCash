@@ -4,7 +4,8 @@
     table {
         width: 100%;
         tr {
-            th, td {
+            th,
+            td {
                 width: 15%;
             }
             th {
@@ -20,14 +21,10 @@
         }
         .invoice-header {
             border-bottom: 2px solid #a6a6a6;
-            .date {
-            }
-            .total {
-            }
-            .target-group {
-            }
-            .settings {
-            }
+            .date {}
+            .total {}
+            .target-group {}
+            .settings {}
         }
     }
-} 
+}

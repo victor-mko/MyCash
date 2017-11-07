@@ -4,3 +4,5 @@
   .cost-item td {
     padding-top: 30px;
     padding-bottom: 5px; }
+    .cost-item td.what {
+      text-align: left; }
