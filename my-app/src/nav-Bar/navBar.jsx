@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './navBar.css';
-import PageNav from './PageNav/pageNav.js';
-import Balance from './Balance/balance.js';
+import PageNav from './PageNav/pageNav';
+import Balance from './Balance/balance';
 
 
 

@@ -1,3 +1,5 @@
+import ActionTypes from '../actions/types';
+
 let date = new Date();
 let year = date.getUTCFullYear();
 let month = date.getUTCMonth() + 1;
@@ -73,7 +75,7 @@ let invoiceArray = [{
 
 
 export default function invoiceList(state = invoiceArray, action) {
-    if (action.type === "ADD_INVOICES") {
+    if (action.type === ActionTypes.ADD_INVOICE) {
         return [
             ...state,
             action.payload

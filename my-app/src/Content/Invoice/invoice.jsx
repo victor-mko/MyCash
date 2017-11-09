@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./invoice-style.css";
-import CostItem from "./cost-item.js";
-import SearchAndFilter from "./Search-and-Filter/search-and-filter.js";
+import CostItem from "./cost-item";
+import SearchAndFilter from "./Search-and-Filter/search-and-filter";
 import { connect } from 'react-redux';
 
 
@@ -38,9 +38,9 @@ class Invoice extends Component {
 export default connect (
     state => ({
         invoiceArray: state.invoiceList.filter(
-            invoice => state.invoiceList.map((el, index) => { 
-                return (el.what.includes(state.findInvoice))
-            }))
+            (invoice) => {
+                return invoice.what.toLowerCase().includes(state.findInvoice.toLowerCase())
+            })
     }),
     dispatch => ({})
 )(Invoice);

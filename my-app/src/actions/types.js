@@ -1,0 +1,9 @@
+const ActionTypes = {
+    ADD_INVOICE: "ADD_INVOICE",
+    FIND_INVOICES: "FIND_INVOICES",
+    LOGIN_REQUEST: "LOGIN_REQUEST",
+    LOGIN_SUCCESS: "LOGIN_SUCCESS",
+    LOGIN_ERROR: "LOGIN_ERROR"
+}
+
+export default ActionTypes;

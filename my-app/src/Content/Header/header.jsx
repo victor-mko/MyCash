@@ -2,22 +2,27 @@ import React, { Component } from "react";
 import "./header-style.css";
 import "../../scss/fonts.css";
 import AvatarDefault from "../../image/AvatarDefault.jpg";
+import FacebookLogin from 'react-facebook-login';
 
 
-class Header extends Component {
+
+
+
+class Header extends Component { 
     render () {
         return (
             <div className="header">
+                
                 <div className="user-name">
                     <p id="userName" >User Name</p>
                 </div>
                 <div className="user-avatar">
-                    <img id="userAvatar" src={AvatarDefault} alt={"Viktor Mykhailenko"} />
+                    <img id="userAvatar" src={AvatarDefault} alt ={"Viktor Mykhailenko"} />
                 </div>
                 <div className="settings">
                     <a href="">
                         <i className="icon-settings"></i>
-                    </a>
+                    </a> 
                 </div>
                 <div className="logout">
                     <a href="">

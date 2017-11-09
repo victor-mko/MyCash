@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "./content-style.css";
-import Header from "./Header/header.js";
-import AddButton from "./Add-Button/addButton.js";
-import Form from "./Form/addInvoiceForm.js";
-import Invoice from "./Invoice/invoice.js";
+import Header from "./Header/header";
+import AddButton from "./Add-Button/addButton";
+import Form from "./Form/addInvoiceForm";
+import Invoice from "./Invoice/invoice";
 import { connect } from "react-redux";
 
 
@@ -39,21 +39,21 @@ class Content extends Component {
 
     render() {
         return ( 
-            <div className = "content">
-            <Header />
-            <Invoice InvoiceArray = { this.state.InvoiceArray } /> 
-            <AddButton handleCloseOpenForm = { this.handleCloseOpenForm }/> 
-            <Form 
-                handleCloseOpenForm = { this.handleCloseOpenForm }
-                visible = { this.state.visible }
-                handleNewInvoiceAdd = { this.handleNewInvoiceAdd }
-            /> 
-            </div>
+            <div className = "content" >
+                <Header />
+                <Invoice InvoiceArray = { this.state.InvoiceArray } />
+                <AddButton handleCloseOpenForm = { this.handleCloseOpenForm }/>
+                <Form
+                    handleCloseOpenForm = { this.handleCloseOpenForm }
+                    visible = { this.state.visible }
+                    handleNewInvoiceAdd = { this.handleNewInvoiceAdd }
+                />  
+            </div >
         );
     }
 }
 
-export default connect (
+export default connect(
     state => ({
         InvoiseStore: state
     }),
