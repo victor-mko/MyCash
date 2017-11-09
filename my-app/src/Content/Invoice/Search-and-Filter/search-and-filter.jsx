@@ -13,10 +13,12 @@ class SearchAndFilter extends Component {
 
     handleInputChange = (event) => {
         this.setState({ searchValue: event.target.value });
+        this.props.onFindInvoice(event.target.value);
     }
 
     searchInvoice = (event) => {
-        this.props.onFindInvoice(this.state.searchValue)
+        this.props.onFindInvoice(this.state.searchValue);
+        this.setState({ searchValue: "" });
     }
 
     render () {
@@ -29,7 +31,9 @@ class SearchAndFilter extends Component {
                         value={this.state.searchValue} 
                         onChange={this.handleInputChange} 
                         placeholder="Search..."
+                        
                     />
+                    {/* onKeyPress={this.searchInvoice} */}
                     <button type="submit" className="search-button" onClick={this.searchInvoice}></button>
                 </div>
                 <div className="filter">
@@ -55,7 +59,7 @@ export default connect(
     dispatch => ({
         onFindInvoice: (invoice) => {
             dispatch({
-                type: "FIND_INVOICE",
+                type: "FIND_INVOICES",
                 payload: invoice
             });
         }
