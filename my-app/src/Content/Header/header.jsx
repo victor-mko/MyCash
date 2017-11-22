@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./header-style.css";
 import "../../scss/fonts.css";
 import AvatarDefault from "../../image/AvatarDefault.jpg";
-import FacebookLogin from 'react-facebook-login';
 
 
 

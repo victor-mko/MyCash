@@ -3,7 +3,8 @@ const ActionTypes = {
     FIND_INVOICES: "FIND_INVOICES",
     LOGIN_REQUEST: "LOGIN_REQUEST",
     LOGIN_SUCCESS: "LOGIN_SUCCESS",
-    LOGIN_ERROR: "LOGIN_ERROR"
+    LOGIN_ERROR: "LOGIN_ERROR",
+    USER_DATE: "USER_DATE"
 }
 
 export default ActionTypes;

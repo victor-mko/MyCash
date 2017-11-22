@@ -56,5 +56,7 @@ export default connect(
     state => ({
         invoiceArray: state
     }),
-    dispatch => ({})
+    dispatch => ({
+        
+    })
 )(AuthPage);
