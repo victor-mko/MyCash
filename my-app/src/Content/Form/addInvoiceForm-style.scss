@@ -1,6 +1,7 @@
 .hide {
     display: none;
 }
+
 .form-invoice-add {
     top: 0;
     position: absolute;
@@ -12,7 +13,7 @@
     align-items: center;
     justify-content: center;
     .form-box {
-        width: 390px; 
+        width: 390px;
         background: white;
         .form-header {
             background-color: #eff1f3;
@@ -50,14 +51,15 @@
         }
         form {
             font-size: 14px;
-            padding:50px 30px 15px;
+            padding: 50px 30px 15px;
             .imput-box {
                 margin-bottom: 30px;
                 border-bottom: 1px solid black;
                 padding-bottom: 5px;
                 text-indent: 10px;
                 padding: 0 10px 0 0;
-                input, select {
+                input,
+                select {
                     border: none;
                     width: 100%;
                     color: #a6a6a6;
@@ -67,9 +69,9 @@
                 }
             }
             .date-invoice {
-                
                 a {
                     font-size: 14px;
+                    color: black;
                 }
             }
         }
