@@ -5,30 +5,28 @@ import {
     Redirect
 } from 'react-router-dom';
 import { connect } from "react-redux";
+import * as actions from '../actions/authActions';
 
 class AuthPage extends Component {
-    constructor() {
-        super();
-        this.state = {
-            auth: false
-        }
+
+    onClickFacebookHandler = () => {
+        this.props.requestLogin();
     }
-        responseFacebook = (response) => {
-            if (response.status !== "not_authorized") {
-                this.setState((prevState) => ({
-                    auth: !prevState.auth
-                }));
-            };
-            console.log(response);
-            console.log(response.status);
-            console.log(this.state.auth);
+
+    responseFacebook = response => {
+        if (response.status !== "not_authorized") {
+            this.props.receiveLogin(response);
+        } else {
+            this.props.errorLogin(response.status)
         }
+
+    }
     
     render () {
         return ( 
             <div className="login-page">
                 {
-                    (this.state.auth) ? <Redirect to="/app" /> : 
+                    (this.props.auth.isLoggedin) ? <Redirect to="/app" /> : 
                         <div className="container">
                             <div className="LogoBox">
                                 <a href="">
@@ -38,6 +36,7 @@ class AuthPage extends Component {
                             <div className="buttom-box">
                                 <p className="login-text">Please login with facebook to enter in MyCash App</p>
                                 <FacebookLogin
+                                    onClick={this.onClickFacebookHandler}
                                     appId="143280559734605"
                                     autoLoad={false}
                                     fields="name,email,picture"
@@ -52,11 +51,11 @@ class AuthPage extends Component {
     }
 }
 
-export default connect(
-    state => ({
-        invoiceArray: state
-    }),
-    dispatch => ({
-        
-    })
-)(AuthPage);
+const mapStoreToProps = (store) => {
+    return {
+        auth: store.authReducer
+    }
+}
+
+
+export default connect(mapStoreToProps, actions)(AuthPage);

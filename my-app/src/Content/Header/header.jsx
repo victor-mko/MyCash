@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./header-style.css";
 import "../../scss/fonts.css";
 import AvatarDefault from "../../image/AvatarDefault.jpg";
-
+import { connect } from "react-redux"; 
 
 
 
@@ -13,10 +13,10 @@ class Header extends Component {
             <div className="header">
                 
                 <div className="user-name">
-                    <p id="userName" >User Name</p>
+                    <p id="userName" >{this.props.auth.user.name}</p>
                 </div>
                 <div className="user-avatar">
-                    <img id="userAvatar" src={AvatarDefault} alt ={"Viktor Mykhailenko"} />
+                    <img id="userAvatar" src={this.props.auth.user.picture.data.url } alt ={"Viktor Mykhailenko"} />
                 </div>
                 <div className="settings">
                     <a href="">
@@ -33,4 +33,10 @@ class Header extends Component {
     }
 }
 
-export default Header;
+
+const mapStoreToProps = (store) => {
+    return {
+        auth: store.authReducer
+    }
+}
+export default connect(mapStoreToProps, null)(Header);
