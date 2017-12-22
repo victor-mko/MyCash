@@ -13,7 +13,7 @@ import {
     BrowserRouter,
     Route,
     Switch
-} from 'react-router-dom'
+} from 'react-router-dom';
 
 
 

@@ -10,3 +10,5 @@
   bottom: 90px;
   right: 90px;
   text-align: center; }
+  .add-button:hover {
+    cursor: pointer; }

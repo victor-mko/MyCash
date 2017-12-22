@@ -85,7 +85,7 @@ class Form extends Component {
                                 onChange = { this.handleExpensesTypeChange }            
                                 className = "forWhatInvoice" 
                             >
-                                <option value = "Food" > Food </option>
+                                <option selected value = "Food" > Food </option>
                                 <option value = "Transit" > Transit </option>
                                 <option value = "Household chemicals" > Household chemicals </option> 
                                 <option value = "Clothing" > Clothing </option> 
